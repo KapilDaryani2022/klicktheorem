@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="klick-theorem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <link rel="apple-touch-icon" sizes="76x76" href="Fav-Icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Fav-Icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Fav-Icon/favicon-16x16.png">
+    <link rel="manifest" href="Fav-Icon/site.webmanifest">
+    <link rel="mask-icon" href="Fav-Icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="Fav-Icon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="Fav-Icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,900&display=swap" rel="stylesheet">
+    <title>Klick Theorem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mobile-container {
+            max-width: 100%;
+            ;
+            margin: auto;
+            background-color: white;
+            height: auto;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: white;
+            position: relative;
+        }
+
+        .topnav #myLinks {
+            display: none;
+            border-bottom: 2px solid #0e76bc;
+
+        }
+
+
+        .topnav a {
+            color: #555;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            width: 60px;
+            padding: 0;
+        }
+
+        .topnav a:hover {
+            background-color: white;
+
+        }
+
+        .topnav a:last-child {
+            background-color: white;
+
+
+
+        }
+
+        .icoon {
+            width: 40px;
+
+        }
+
+        .owl-carousel .owl-nav button.owl-next,
+        .owl-carousel .owl-nav button.owl-prev,
+        .owl-carousel button.owl-dot {
+            background: 0 0;
+            color: #555;
+            border: none;
+            padding: 6px 18px !important;
+            font: inherit;
+            border-radius: 50% !important;
+            font-size: 30px;
+        }
+
+        .owl-next {
+            float: right;
+        }
+
+        .owl-prev {
+            float: left;
+        }
+
+        .owl-theme .owl-nav {
+            position: absolute;
+           padding: 0 180px;
+            width: 100%;
+            top: 150px;
+        }
+
+        .owl-theme {
+           text-align: center;
+            
+        }
+        
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background-color: #40a7f7 !important;
+            
+        }
+        @media only screen and (max-width:900px){
+            .owl-theme .owl-nav {
+            position: absolute;
+           padding: 0 80px;
+            width: 100%;
+            top: 100px;
+        }
+
+        }
+         @media only screen and (max-width:500px){
+            .owl-theme .owl-nav {
+            position: absolute;
+            top: 35px;
+             padding: 0 20px;
+            width: 100%;
+        }
+
+        }
+        
+        
+
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="row navi clearfix">
+                <div class="logo-img hiden">
+                    <img src="Untitled-1.png" class="logo">
+                </div>
+                <ul class="main-nav js--main-nav">
+                    <li>
+                        <a href="#my-courses-link">my courses </a>
+                    </li>
+                    <li>
+                        <a href="#All-Courses-link">All Courses </a>
+                    </li>
+                    <li>
+                        <a href="#features-link"> FEATURES & BENIFITS</a>
+                    </li>
+                    <li>
+                        <a href="#trainers-link">THE TRAINERS </a>
+                    </li>
+                    <li>
+                        <a href="#CONTACT-US-link"> CONTACT-US</a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/" class="a" target="_blank"><span class="white"><b>start learning</b></span> </a>
+                    </li>
+                </ul>
+
+
+
+<div class="hovicon effect-8">hello</div>
+
+
+
+
+
+                <div class="mobile-container">
+
+                    <!-- Top Navigation Menu -->
+                    <div class="topnav">
+                        <div class="logo-img">
+                            <img src="Untitled-1.png" class="logo">
+                        </div>
+                        <div id="myLinks">
+                            <a href="#my-courses-link">my courses </a>
+                            <a href="#All-Courses-link">All Courses </a>
+                            <a href="#features-link"> FEATURES & BENIFITS</a>
+                            <a href="#trainers-link">THE TRAINERS </a>
+                            <a href="#CONTACT-US-link"> CONTACT-US</a>
+                            <a href="https://www.google.com/" target="_blank">start learning</a>
+
+                        </div>
+                        <a class="icon" onclick="myFunction()">
+                            <img src="menu-outline.svg" class="icoon">
+                        </a>
+                    </div>
+                    <!-- End smartphone / tablet look -->
+                </div>
+
+
+
+
+
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="all-courses" id="my-courses-link">
+        <div class="row">
+            <div class="col span-1-of-2  animate__animated animate__backInLeft">
+                <h5>All COURSES</h5>
+                <h1>Self-Paced &<br>
+                    Mobile-Friendly</h1>
+                <p class="first-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempoididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                    ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                    facilisis. </p>
+                <a class="btn btn-1" href="#All-Courses-link">View All Courses</a>
+                <a class="btn btn-2" href="#CONTACT-US-link">Contact Us</a>
+                <div class="parent-img-div">
+                    <img src="Pattern-1.png" alt="Pattern" class="pattern">
+                </div>
+
+            </div>
+            <div class="col span-1-of-2 forvid">
+                <img src="video.png" class="vid" id="myBtn">
+            </div>
+            
+            
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QpU3kQ4wap8?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="row dollor">
+            <div class="col span-1-of-2 dol1">
+                <div class="review-box1">
+                    <p class="count ratings">4.5</p>
+                    <img class="stars" src="unnamed.png">
+                    <p class="raitings-sub"><strong>2,394 Raitings</strong></p>
+                    <p class="raitings-sub"><strong>Google Reviews</strong></p>
+                </div>
+                <div class="review-box2">
+                    <p class="ratings">A+</p>
+                    <img class="stars" src="unnamed.png">
+                    <p class="raitings-sub"><strong>125 Students riviews</strong></p>
+                    <p class="raitings-sub"><strong>Google Reviews</strong></p>
+                </div>
+            </div>
+            <div class="col3 span-1-of-2 dol-2">
+                <h3> LAST DOLLAR SCHOLARSHIP</h3>
+                <p class="extension"> WHAT IS THE #1 CE LAST DOLLAR SCHOLARSHIP?</p>
+                <p class="second-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempoididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                    ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                    facilisis. </p>
+                <p class="customer-name"><b>Jessica Simon</b></p>
+                <div class="col1 span-5-of-7">
+                    <p class="customer-quote">I have been following this routine and became healthier by doing lorem ipsum proin gravida nibh</p>
+                </div>
+
+                <img src="customer.png" class="customer-image">
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="sec-all-courses" id="All-Courses-link">
+        <div class="row all-couse">
+            <h3>
+                ALL COURSES
+            </h3>
+            <p class="col4 span-1-of-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+        </div>
+        <div class="row fade">
+            <div class="col span-1-of-3">
+                <figure class="hover-images">
+                    <a href="https://www.google.com/" target="_blank"> <img src="course-1.png" class="courses"></a>
+                </figure>
+                <a href="https://www.google.com/" class="google" target="_blank">
+                    <p class="discription">
+                        OSHA Compliant BBP Training
+                        for Body Art Professionals
+                    </p>
+                </a>
+                <p class="des-short">
+                    This course educates Body Artists about risks involved with exposure to blood and precautions to take for risk reduction.
+                </p>
+            </div>
+            <div class="col span-1-of-3">
+                <figure class="hover-images">
+                    <a href="https://www.google.com/" target="_blank"><img src="course-2.png" class="courses"></a>
+                </figure>
+                <a href="https://www.google.com/" class="google" target="_blank">
+                    <p class="discription">
+                        HIV/AIDS Training for Health
+                        Facility Employees 7Hr
+                    </p>
+                </a>
+                <p class="des-short">
+                    This course is designed to equip Healthcare Facility Employees and other employees
+                </p>
+            </div>
+            <div class="col span-1-of-3">
+                <figure class="hover-images">
+                    <a href="https://www.google.com/" target="_blank"><img src="course-3.png" class="courses"></a>
+                </figure>
+                <a href="https://www.google.com/" class="google" target="_blank">
+                    <p class="discription">
+                        WA: HIV 4Hr + Human
+                        Trafficking + BBP
+                    </p>
+                </a>
+                <p class="des-short">
+                    This course is designed to equip Healthcare Facility Employees with information involving HIV/AIDS. It gives healthcare
+                </p>
+            </div>
+        </div>
+        <div class="row line fancy" id="features-link">
+
+            <h6>Features & Benifits</h6>
+
+        </div>
+        <div class="row features3">
+            <div class="col span-4-of-10 features">
+
+                <h4> FEATURES</h4>
+
+                <ul>
+                    <li><img src="dot.png" class="dot"> Barber Training in HIV/AIDS – Initial/Renewal 2hr</li>
+                    <li> <img src="dot.png" class="dot">Cosmetologist Training in HIV/AIDS – Renewal 1hr</li>
+                    <li> <img src="dot.png" class="dot">Michigan Alcohol Server Training</li>
+                    <li><img src="dot.png" class="dot">Mandated Reporter: PA Act 31 Initial 3hr Training</li>
+                    <li><img src="dot.png" class="dot">NYSED & NYSDOH: CAIR Taller + Control de Infección</li>
+                </ul>
+            </div>
+            <div class="col span-3-of-10 benifits">
+                <h4> BENIFITS</h4>
+                <ul>
+                    <li><img src="dot.png" class="dot">Improve Your Skilr</li>
+                    <li><img src="dot.png" class="dot">Control de infeccion</li>
+                    <li> <img src="dot.png" class="dot">Impairment in the workplace</li>
+                    <li><img src="dot.png" class="dot">Access to all courses</li>
+                    <li><img src="dot.png" class="dot">On demand & self-paced</li>
+                </ul>
+
+            </div>
+            <div class="col span-3-of-10 grp-col">
+                <img src="group.png" class="grp">
+            </div>
+        </div>
+        <div class="row real">
+            <img src="group.png" class="grp-real">
+        </div>
+    </section>
+
+
+    <div class="parent-img-div">
+        <img src="Pattern-1.png" alt="Pattern" class="pattern-2">
+    </div>
+
+
+    <section class="trainers" id="trainers-link">
+        <div class="row train">
+            <h3>
+                THE TRAINERS
+            </h3>
+            <p class="col4 span-1-of-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+        </div>
+        <div class="row part-1">
+            <div class="col7 span-1-of-2">
+
+                <div class="col span-1-of-2">
+                    <figure class="pic-1"> <img src="trainers-2.png" class="trainers-pic1 colkeandar"></figure>
+                </div>
+                <div class="col span-1-of-2 colke">
+                    <p class="colkeandar2">Amy Adkins<br>
+                        Dwivedi</p>
+                    <p class="colkeandar1">
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo luctus .
+                    </p>
+                </div>
+            </div>
+            <div class="col7 span-1-of-2">
+
+                <div class="col span-1-of-2">
+                    <figure class="pic-2"><img src="trainers.png" class="trainers-pic2 colkeandar"></figure>
+                </div>
+                <div class="col span-1-of-2 colke">
+                    <p class="colkeandar4">Margaret<br>
+                        Chinn</p>
+                    <p class="colkeandar3">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row part-2">
+            <div class="column"><img src="trainers-2.png" class="trainers-pic1 colkeandar"></div>
+            <div class="column colke">
+                <p class="colkeandar2">Amy Adkins<br>
+                    Dwivedi</p>
+                <p class="colkeandar1">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo luctus .
+                </p>
+            </div>
+
+
+
+            <div class="column"><img src="trainers.png" class="trainers-pic2 colkeandar"></div>
+            <div class="column colke">
+                <p class="colkeandar4">Margaret<br>
+                    Chinn</p>
+                <p class="colkeandar3">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard.
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="row students">
+            <div class="col span-1-of-3 happy">
+                <h3>
+                    HAPPY FACES OF HAPPY STUDENTS
+                </h3>
+                <p class="happy-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                <a class="btn btn-2" href="#testimonials"> View All Testimonials</a>
+            </div>
+
+            <div class="col span-2-of-3">
+                <img src="happy-studesnts.png" class="happy-studens">
+            </div>
+        </div>
+    </section>
+      <h1 class="main-head">
+                Exemplary Outcomes
+            </h1>
+
+    <div class="owl-carousel owl-theme" id="testimonials">
+        <div class="item">
+
+          
+            <img src="testimonial-1.png" class="testimonial-mg" style="width: 120px; margin: 0 auto;">
+            <h2 class="testimonial-head2 ">
+                JakeM.
+            </h2>
+            <p style="color: #555; text-transform: uppercase; margin-bottom: 20px;">
+                digital marketing manager USA
+            </p>
+            <p class="wi">
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            </p>
+        </div>
+
+        <div class="item">
+
+            
+            <img src="testimonial-2.png" class="testimonial-mg" style="width: 120px; margin: 0 auto;">
+            <h2 class="testimonial-head2 ">
+                Daisey Lee
+            </h2>
+            <p style="color: #555; text-transform: uppercase; margin-bottom: 20px;">
+                digital marketing manager USA
+            </p>
+            <p class="wi">
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five."
+            </p>
+        </div>
+
+
+
+        <div class="item">
+
+            
+            <img src="testimonial-3.png" style="width: 120px; margin: 0 auto;" class="testimonial-mg">
+            <h2 class="testimonial-head2 ">
+                Evey Hiles
+            </h2>
+            <p style="color: #555; text-transform: uppercase; margin-bottom: 20px;">
+                digital marketing manager USA
+            </p>
+            <p class="wi">
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it."
+            </p>
+        </div>
+
+        <div class="item">
+
+            
+            <img class="testimonial-mg" src="testimonial-4.png" style="width: 120px; margin: 0 auto;">
+            <h2 class="testimonial-head2 ">
+                Parker Feol
+            </h2>
+            <p style="color: #555; text-transform: uppercase; margin-bottom: 20px;">
+                digital marketing manager USA
+            </p>
+            <p class="wi">
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting."
+            </p>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="rowf footer-heading">
+            <h1 class="head">suscribe to newsletter</h1>
+            <p class="footer-des">Enter your email address to register to our newsletter subscription <br> delivered on regular basis!</p>
+        </div>
+
+        <div class="rowf form" id="CONTACT-US-link">
+            <form method="post" action="#" class="conact-form">
+                <div class="rowg">
+                    <div class="col span-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="email adrres" required>
+                    </div>
+                    <div class="col span-1-of-3">
+                        <input type="submit" value="Suscribe">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="parent-img-di">
+            <img src="Pattern-1.png" alt="Pattern" class="pattern-3">
+        </div>
+        <hr>
+        <div class="row last-line">
+            <div class="col span-1-of-2">
+                <p class="copyright">
+                    Copyright © 2021 All rights reserved.
+                </p>
+            </div>
+            <div class="col span-1-of-2">
+                <p class="copyright-line">
+                    POWERED BY KLICKTHEOREM.
+                </p>
+            </div>
+        </div>
+        <div class="row last-linem">
+            <div class="cot">
+                <p class="copyright">
+                    Copyright © 2021 All rights reserved.
+                </p>
+            </div>
+            <div class="cot1">
+                <p class="copyright-line">
+                    POWERED BY KLICKTHEOREM.
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </footer>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="klicktheorem.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        };
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+
+        }
+
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--Improve Your Skil
+Control de infeccion
+Impairment in the workplace
+Access to all courses
+On demand & self-paced
+amnishkharage
+
+
+
+
+
+
+-->
